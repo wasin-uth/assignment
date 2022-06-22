@@ -1,0 +1,154 @@
+:root {
+    --main-color: #7d5183;
+    --bg-color: #dfcae2;
+    --hover: #7d5183de;
+}
+
+.per-information {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .per-information {
+        max-width: 200px;
+    }
+}
+
+.card {
+    background-color: #ffffff50;
+    width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px auto;
+}
+
+/* Form */
+input[type=text],
+input[type=number],
+#phone-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--main-color);
+    background-color: var(--bg-color);
+}
+
+input[type=radio] {
+    margin: 2px;
+}
+
+input[type=radio]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--bg-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type=radio]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--main-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+    background-color: var(--hover);
+}
+
+/* Table */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid var(--bg-color);
+    text-align: left;
+    padding: 8px;
+    color: var(--main-color);
+}
+
+th p:hover {
+    cursor: pointer;
+    color: var(--hover);
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-color);
+}
+
+/* Pagination */
+.pageNumbers {
+    list-style: none;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.pageNumbers li {
+    padding: 10px;
+    border: 1px solid var(--bg-color);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.pageNumbers li.active {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+
+.pageNumbers li button {
+    background-color: transparent;
+    border: none;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.pageNumbers li button:hover {
+    color: var(--bg-color);
+}
+
+.pageNumbers li button:focus {
+    outline: none;
+}
+
+.pageNumbers li button:disabled {
+    color: var(--bg-color);
+}

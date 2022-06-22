@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eed5ff;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.navbar>* {
+    text-decoration: none;
+    color: #b475bd;
+    padding: 0 10px;
+}
+
+.navbar>*:hover {
+    color: #c9acce;
+}
+
+.navbar .active {
+    color: #b475bd;
+    border-bottom: 2px dotted #b475bd;
+}
