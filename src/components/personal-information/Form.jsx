@@ -32,7 +32,7 @@ export const Form = ({ todos, setTodos }) => {
             ...todos,
             {
                 id: todos.length + 1,
-                name: name,
+                name: name.trim(),
                 gender: gender,
                 age: age,
             }
@@ -52,7 +52,7 @@ export const Form = ({ todos, setTodos }) => {
                         name="name"
                         id="name"
                         {...register("name", { required: true, minLength: 2 })}
-                        defaultValue={name}
+                        value={name}
                         onChange={handleInputChange}
                         placeholder="Enter your name"
                     />
@@ -80,7 +80,7 @@ export const Form = ({ todos, setTodos }) => {
                         type="radio"
                         name="gender"
                         id="male"
-                        defaultValue="Male"
+                        value="Male"
                         onChange={handleGenderChange}
                     />
                     <label htmlFor="male"> Male </label><br />
@@ -88,7 +88,7 @@ export const Form = ({ todos, setTodos }) => {
                         type="radio"
                         name="gender"
                         id="female"
-                        defaultValue="Female"
+                        value="Female"
                         onChange={handleGenderChange}
                     />
                     <label htmlFor="female"> Female </label><br />
@@ -103,7 +103,7 @@ export const Form = ({ todos, setTodos }) => {
                         id="age"
                         placeholder="Enter your age"
                         {...register("age", { required: true, maxLength: 2 })}
-                        defaultValue={age}
+                        value={age}
                         onChange={handleAgeChange}
                     />
                     {Object.keys(errors).length !== 0 && (
